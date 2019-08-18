@@ -24,7 +24,7 @@ npm install
 
 ## Assets build
 ```commmandline
-npm build
+npm run-script build
 ```
 
 ## Run
