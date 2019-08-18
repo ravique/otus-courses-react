@@ -1,49 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f5f468fc-c48c-4a42-bedf-2b13eeafbd6b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/block/block.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/block/block.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/block/courses-block.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/block/lecturers-block.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/button/button.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/button/button.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/container/container.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/container/container.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/content/content.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/content/content.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/filter/filter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/filter/filter.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/footer/footer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/footer/footer.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/general.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/header/header.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/login_form/login_form.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/menu/menu.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/auth.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/courses.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/filter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/lessons.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/lessons.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/setupProxy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/API.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vars.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/otus-react.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/otus-react.iml" afterDir="false" />
+    <list default="true" id="f5f468fc-c48c-4a42-bedf-2b13eeafbd6b" name="Default" comment="- Main page">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -72,7 +34,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="container.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="container.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/container/container.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="512">
@@ -80,6 +42,36 @@
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="320">
+                <caret line="16" column="78" lean-forward="true" selection-start-line="16" selection-start-column="78" selection-end-line="16" selection-end-column="78" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="500">
+              <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="API.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/utils/API.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -128,6 +120,8 @@
         <option value="$PROJECT_DIR$/src/button/button.scss" />
         <option value="$PROJECT_DIR$/src/button/button.js" />
         <option value="$PROJECT_DIR$/src/container/container.js" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -165,16 +159,6 @@
             <path>
               <item name="otus-react" type="b2602c69:ProjectViewProjectNode" />
               <item name="otus-react" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="otus-react" type="b2602c69:ProjectViewProjectNode" />
-              <item name="otus-react" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="otus-react" type="b2602c69:ProjectViewProjectNode" />
-              <item name="otus-react" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -257,6 +241,14 @@
       <option name="presentableId" value="Default" />
       <updated>1565106746499</updated>
     </task>
+    <task id="LOCAL-00001" summary="- Main page">
+      <created>1566145246874</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1566145246875</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -266,15 +258,15 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32961783" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32882166" />
       <window_info id="npm" order="2" sideWeight="0.28503564" side_tool="true" visible="true" weight="0.2540453" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32961783" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32961783" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7149644" visible="true" weight="0.2540453" />
       <window_info anchor="bottom" id="Docker" order="7" weight="0.32961783" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32961783" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32961783" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -290,8 +282,49 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="- Main page" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Main page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -394,18 +427,7 @@
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-704" />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/logo.svg" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/package-lock.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -442,13 +464,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="3" column="56" selection-start-line="3" selection-start-column="56" selection-end-line="3" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/API.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -614,6 +629,30 @@
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/API.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="320">
+            <caret line="16" column="78" lean-forward="true" selection-start-line="16" selection-start-column="78" selection-end-line="16" selection-end-column="78" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
         </state>
       </provider>
     </entry>
