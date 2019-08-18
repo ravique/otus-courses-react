@@ -4,6 +4,7 @@
     <list default="true" id="f5f468fc-c48c-4a42-bedf-2b13eeafbd6b" name="Default" comment="+ Index fix">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -64,7 +65,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="400">
-                <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+                <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
               </first_editor>
               <second_editor />
             </state>
@@ -75,7 +76,7 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="500">
-              <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
             </state>
           </provider>
         </entry>
@@ -98,7 +99,7 @@
         <entry file="file://$PROJECT_DIR$/src/utils/API.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="80">
-              <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+              <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -170,8 +171,9 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1273" />
-    <option name="width" value="1294" />
+    <option name="x" value="43" />
+    <option name="y" value="33" />
+    <option name="width" value="2517" />
     <option name="height" value="1407" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -319,7 +321,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566148167925</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="+ Cleanup, stupid git!">
+      <created>1566148287179</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1566148287179</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -333,8 +342,8 @@
       <window_info id="npm" order="2" sideWeight="0.2862233" side_tool="true" visible="true" weight="0.25606796" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32961783" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32961783" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7137767" visible="true" weight="0.25606796" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32961783" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7137767" visible="true" weight="0.25606796" />
       <window_info anchor="bottom" id="Docker" order="7" weight="0.32961783" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -400,7 +409,8 @@
     <MESSAGE value="+ README fix" />
     <MESSAGE value="+ Cleanup" />
     <MESSAGE value="+ Index fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ Index fix" />
+    <MESSAGE value="+ Cleanup, stupid git!" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ Cleanup, stupid git!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -648,7 +658,7 @@
     <entry file="file://$PROJECT_DIR$/src/utils/API.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
-          <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -656,7 +666,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="400">
-            <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+            <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
           </first_editor>
           <second_editor />
         </state>
@@ -705,7 +715,7 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
-          <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
