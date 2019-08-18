@@ -1,0 +1,13 @@
+.content {
+  background: aquamarine;
+  height: auto;
+  flex: 1 0 auto;
+  width: 1200px;
+  padding: 10px;
+
+  @media (max-width: 1199px) {
+    width: calc(100% - 20px);
+  }
+
+}
+

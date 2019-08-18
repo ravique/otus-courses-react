@@ -1,0 +1,29 @@
+.header {
+  @include wrapper;
+  background: $green;
+  height: 60px;
+  display: flex;
+  align-items: center;
+
+  &__logo {
+    padding: 20px;
+    flex-grow: 1;
+
+    .link {
+      color: $black;
+      text-decoration: none;
+    }
+  }
+  &__menu {
+    flex: 1 0 auto;
+    padding: 20px;
+  }
+
+  @media (min-width: 320px) and (max-width: 1024px) {
+    &__logo {
+      text-align: center;
+    }
+  }
+
+}
+

@@ -1,0 +1,9 @@
+.footer {
+  @include wrapper;
+  background: black;
+  height: 5em;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  color: white;
+}

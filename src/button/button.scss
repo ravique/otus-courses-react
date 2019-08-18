@@ -1,0 +1,41 @@
+.button {
+  display: inline-block;
+  margin: 10px 10px 10px 0;
+  padding: 5px 10px;
+  border: 1px green solid;
+  text-decoration: none;
+  color: $green;
+  background: transparent;
+
+  &:hover {
+    text-decoration: none;
+    color: $blue;
+  }
+
+  &:visited {
+    color: $green;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &_right {
+    text-align: right;
+  }
+
+  &_full_width {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  &_pressed {
+    border: 1px solid white;
+    color: $white;
+  }
+
+  &_pressed:hover {
+    border: 1px solid white;
+    color: $white;
+  }
+}
