@@ -2,8 +2,6 @@ import React, {Component} from "react";
 import API from '../utils/API';
 import CoursesBlock from '../block/courses-block';
 import LecturersBlock from '../block/lecturers-block';
-import Button from "../button/button";
-
 
 class CoursesContainer extends Component {
 
@@ -63,21 +61,14 @@ class LecturersContainer extends Component {
     }
 }
 
-
-
-
 class Content extends Component {
     render() {
         return (
             <div className="content">
-                <h2>Courses:</h2>
-                <CoursesContainer/>
-                <Button url='/' text="Show more"/>
-                <h2>Our lecturers</h2>
-                <LecturersContainer/>
+                {this.props.children}
             </div>
         )
     }
 }
 
-export default Content;
+export {Content, CoursesContainer, LecturersContainer};
