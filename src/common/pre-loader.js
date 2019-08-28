@@ -1,4 +1,4 @@
-const PreLoader = () => (
+const PreLoader = (props) => (
     'Data is loading'
 );
 

@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import API from '../utils/API';
 import CoursesBlock from '../block/courses-block';
 import LecturersBlock from '../block/lecturers-block';
+import PreLoader from "../common/pre-loader";
 
 class CoursesContainer extends Component {
 
@@ -15,9 +16,11 @@ class CoursesContainer extends Component {
     }
 
     render() {
+        const content = this.state.isLoading ? <PreLoader/> : <CoursesBlock coursesData={this.state.coursesData}/>
+
         return (
             <div className="container">
-                <CoursesBlock coursesData={this.state.coursesData} isLoading={this.state.isLoading}/>
+                {content}
             </div>
         )
     }
@@ -32,7 +35,6 @@ class CoursesContainer extends Component {
 }
 
 
-
 class LecturersContainer extends Component {
 
     constructor(props) {
@@ -45,11 +47,14 @@ class LecturersContainer extends Component {
     }
 
     render() {
+        const content = this.state.isLoading ? <PreLoader/> : <LecturersBlock lecturersData={this.state.lecturersData}/>
+
         return (
             <div className="container">
-                <LecturersBlock lecturersData={this.state.lecturersData} isLoading={this.state.isLoading}/>
+                {content}
             </div>
         )
+
     }
 
     async componentDidMount() {
