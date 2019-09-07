@@ -23,8 +23,6 @@ export default class RegisterForm extends Component {
         this.setState({
             [event.target.name]: event.target.value
         });
-
-        this.forceUpdate()
     }
 
     handlePasswordChange(event) {
