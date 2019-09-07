@@ -1,4 +1,4 @@
-.login_form {
+.form {
   width: 500px;
   margin: 0 auto;
 
@@ -8,7 +8,12 @@
 
   &__label {
     display: block;
-    margin: 10px 0 0 0;
+    margin: 15px 0 0 0;
+
+    &_errrors {
+      color: $red;
+    }
+
   }
 
   &__errors {
@@ -19,6 +24,5 @@
       margin: 5px 0;
     }
   }
-
 }
 

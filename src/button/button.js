@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {classNames} from 'classnames';
+const classNames = require('classnames');
 
 class Button extends Component {
     constructor(props) {
@@ -10,6 +10,7 @@ class Button extends Component {
         };
     }
 
+
     handleClick() {
         this.setState(prevState => ({
             pressed: !prevState.pressed
@@ -17,8 +18,10 @@ class Button extends Component {
     }
 
     render() {
-        let btnClass = 'button';
-        if (this.state.pressed) btnClass += ' button_pressed';
+        let btnClass = classNames({
+            'button': true,
+            'button_pressed': this.state.pressed
+        });
 
         return (
             <button className={btnClass} onClick={this.handleClick.bind(this)}>{this.props.text}</button>

@@ -28,9 +28,10 @@ class CoursesContainer extends Component {
     async componentDidMount() {
         let coursesData = await API.get('course');
         this.setState({
-            coursesData: coursesData.data.objects,
-            isLoading: false
-        })
+                coursesData: coursesData.data.objects,
+                isLoading: false
+            }
+        )
     }
 }
 
@@ -54,7 +55,6 @@ class LecturersContainer extends Component {
                 {content}
             </div>
         )
-
     }
 
     async componentDidMount() {
@@ -66,14 +66,6 @@ class LecturersContainer extends Component {
     }
 }
 
-class Content extends Component {
-    render() {
-        return (
-            <div className="content">
-                {this.props.children}
-            </div>
-        )
-    }
-}
 
-export {Content, CoursesContainer, LecturersContainer};
+
+export {CoursesContainer, LecturersContainer};

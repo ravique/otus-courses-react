@@ -1,8 +1,5 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import Cookies from 'universal-cookie';
-
-const cookies = new Cookies()
 
 class Logo extends Component {
     render() {
@@ -15,35 +12,15 @@ class Logo extends Component {
 }
 
 class Menu extends Component {
-
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            loggedIn: false
-        }
-    }
-
-    componentDidMount() {
-        this.setState({loggedIn: cookies.get('loggedIn')})
-    }
-
     render() {
-
-        // if (!this.state.loggedIn) {
-        //     return (
-        //
-        //     )
-        // }
-
         return (
             <div className='menu'>
-
-
-                <Link to="/all_courses" className="menu__link">All courses</Link>&nbsp;|&nbsp;<Link to="/register"
-                                                                                    className="menu__link">Register</Link>&nbsp;|&nbsp;<Link to="/login"
-                                                                                    className="menu__link">Login</Link>
+                <Link to="/all_courses" className="menu__link">All courses</Link>,
+                <Link to="/login" className="menu__link">Login</Link>,
+                <Link to="/logout" className="menu__link">Logout</Link>,
+                <Link to="/register" className="menu__link">Register</Link>
             </div>
+
         )
     }
 }
