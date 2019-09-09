@@ -3,7 +3,7 @@ import {Redirect} from "react-router-dom";
 
 import API from "../utils/API";
 import ThrowErrors from "../throw_errors/throw_errors";
-import {FormLabel} from "../form/form";
+import {FormInput, FormLabel} from "../form/form";
 
 export default class LoginContainer extends Component {
     constructor(props) {
@@ -15,12 +15,15 @@ export default class LoginContainer extends Component {
             username: '',
             password: ''
         };
+
+        this.handleChange = this.handleChange.bind(this);
     }
 
     handleChange(event) {
         this.setState({
-            [event.target.name]: event.target.value
-        });
+                [event.target.name]: event.target.value
+            }
+        );
     }
 
     handleSubmit = event => {
@@ -49,34 +52,33 @@ export default class LoginContainer extends Component {
 
         if (!this.state.loggedIn) {
             return (
-                <div className="form" onSubmit={this.handleSubmit.bind(this)}>
-                    <form className="Login">
-                        <FormLabel name="login"/>
-                        <input
-                            type="text"
-                            className="form__input"
-                            name="username"
-                            onChange={this.handleChange.bind(this)}
-                            placeholder="Enter your username."
-                            value={this.state.username}/>
-                        <ThrowErrors message={this.state.errors.username}/>
+                <form className="form" onSubmit={this.handleSubmit.bind(this)}>
+                    <FormLabel name="login"/>
+                    <FormInput
+                        type="text"
+                        name="username"
+                        eventHandler={this.handleChange}
+                        placeholder="Enter your username."
+                        value={this.state.username}
+                        error={this.state.errors.username}
+                    />
+                    <ThrowErrors message={this.state.errors.username}/>
 
-                        <FormLabel name="password"/>
-                        <input
-                            type="password"
-                            className="form__input"
-                            name="password"
-                            onChange={this.handleChange.bind(this)}
-                            value={this.state.password}
-                            placeholder="Enter your password."/>
-                        <ThrowErrors message={this.state.errors.password}/>
+                    <FormLabel name="password"/>
+                    <FormInput
+                        type="password"
+                        name="password"
+                        eventHandler={this.handleChange}
+                        placeholder="Enter your password."
+                        value={this.state.password}
+                        error={this.state.errors.password}
+                    />
+                    <ThrowErrors message={this.state.errors.password}/>
 
-                        <ThrowErrors message={this.state.errors.non_field_errors}/>
+                    <ThrowErrors message={this.state.errors.non_field_errors}/>
 
-                        <button type="submit" className="button button_full_width">Login</button>
-                    </form>
-                </div>
-
+                    <button type="submit" className="button button_full_width">Login</button>
+                </form>
             )
         } else {
             return (

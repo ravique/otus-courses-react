@@ -6,16 +6,16 @@
     width: 100%;
     padding: 10px;
     border: 1px solid $white;
+
+    &_error {
+      box-shadow: 0 0 5px rgb(238, 15, 24);
+      border: 1px solid rgb(238, 15, 24);
+    }
   }
 
   &__label {
     display: block;
     margin: 15px 0 0 0;
-
-    &_errrors {
-      color: $red;
-    }
-
   }
 
   &__errors {

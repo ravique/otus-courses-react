@@ -10,6 +10,7 @@ import AllCourses from './pages/all_courses'
 import Login from './pages/login'
 import Register from './pages/register'
 import Logout from "./pages/logout";
+import AccountContainer from "./pages/account";
 
 const history = createBrowserHistory();
 
@@ -23,7 +24,8 @@ class Nav extends Component {
                 <Route path="/all_courses" component={AllCourses}/>
                 <Route path="/login" component={Login}/>
                 <Route path="/register" component={Register}/>
-                <Route path="/logout" render={Logout}/>
+                <Route path="/logout" component={Logout}/>
+                <Route path="/account" component={AccountContainer}/>
                 <Footer/>
             </BrowserRouter>
         )

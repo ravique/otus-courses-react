@@ -18,7 +18,8 @@ class Menu extends Component {
                 <Link to="/all_courses" className="menu__link">All courses</Link>,
                 <Link to="/login" className="menu__link">Login</Link>,
                 <Link to="/logout" className="menu__link">Logout</Link>,
-                <Link to="/register" className="menu__link">Register</Link>
+                <Link to="/register" className="menu__link">Register</Link>,
+                <Link to="/account" className="menu__link">Account</Link>
             </div>
 
         )

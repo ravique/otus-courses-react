@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import ThrowErrors from "../throw_errors/throw_errors";
 import API from "../utils/API";
-import {FormLabel} from "../form/form";
+import {FormInput, FormLabel} from "../form/form";
 
 
 export default class RegisterForm extends Component {
@@ -17,24 +17,23 @@ export default class RegisterForm extends Component {
             email: '',
             message: ''
         };
+
+        this.handleChange = this.handleChange.bind(this);
     }
 
     handleChange(event) {
         this.setState({
-            [event.target.name]: event.target.value
-        });
+                [event.target.name]: event.target.value
+            }
+        );
     }
 
     handlePasswordChange(event) {
-        this.setState({
-            [event.target.name]: event.target.value
-        });
-    }
 
-    handleSubmit = event => {
-        event.preventDefault();
+        let check;
+        event.target.name === 'password' ? check = this.state.password2 : check = this.state.password;
 
-        if (this.state.password !== this.state.password2) {
+        if (event.target.value !== check) {
             this.setState({
                     errors: {
                         password: ['Passwords mismatch']
@@ -42,80 +41,92 @@ export default class RegisterForm extends Component {
                 }
             );
         } else {
-            API.post('register/', {
-                "username": this.state.username,
-                "password": this.state.password,
-                "email": this.state.email
-            }).then(response => {
-                    this.setState(
-                        {
-                            message: `Registered successfully. Verification email sent to ${response.data.email}`,
-                            errors: []
-                        }
-                    )
-                }
-            ).catch(
-                errors => {
-                    if (errors.response) {
-                        this.setState({
-                            errors: errors.response.data['errors']
-                        });
+            this.setState({
+                    errors: {
+                        password: []
                     }
                 }
-            )
+            );
         }
+
+        this.handleChange(event);
+    }
+
+    handleSubmit = event => {
+        event.preventDefault();
+
+        API.post('register/', {
+            "username": this.state.username,
+            "password": this.state.password,
+            "email": this.state.email
+        }).then(response => {
+                this.setState(
+                    {
+                        message: `Registered successfully. Verification email sent to ${response.data.email}`,
+                        errors: []
+                    }
+                )
+            }
+        ).catch(
+            errors => {
+                if (errors.response) {
+                    this.setState({
+                        errors: errors.response.data['errors']
+                    });
+                }
+            }
+        )
+
     };
 
     render() {
         return (
-            <div className="form" onSubmit={this.handleSubmit.bind(this)}>
-                <form className="Login">
-                    <FormLabel name='username'/>
-                    <input
-                        type="text"
-                        className="form__input"
-                        name="username"
-                        onChange={this.handleChange.bind(this)}
-                        placeholder="Enter your username."
-                        value={this.state.username}/>
-                    <ThrowErrors message={this.state.errors.username}/>
+            <form className="form" onSubmit={this.handleSubmit.bind(this)}>
 
-                    <FormLabel name='email'/>
-                    <input
-                        type="text"
-                        className="form__input"
-                        name="email"
-                        onChange={this.handleChange.bind(this)}
-                        placeholder="Enter your email."
-                        value={this.state.email}/>
-                    <ThrowErrors message={this.state.errors.email}/>
+                <FormLabel name='username' error={this.state.errors.username}/>
+                <FormInput
+                    type='text'
+                    name='username'
+                    error={this.state.errors.username}
+                    eventHandler={this.handleChange}
+                    placeholder='Enter your username'
+                />
+                <ThrowErrors message={this.state.errors.username}/>
 
-                    <FormLabel name='password' errors={this.state.errors.username}/>
-                    <input
-                        type="password"
-                        className="form__input"
-                        name="password"
-                        onChange={this.handlePasswordChange.bind(this)}
-                        value={this.state.password}
-                        placeholder="Enter your password."/>
-                    <ThrowErrors message={this.state.errors.password}/>
+                <FormLabel name='email' error={this.state.errors.email}/>
+                <FormInput
+                    type='email'
+                    name='email'
+                    error={this.state.errors.email}
+                    eventHandler={this.handleChange}
+                    placeholder='Enter your email'
+                />
+                <ThrowErrors message={this.state.errors.email}/>
 
-                    <FormLabel name='password2' text='Confirm password' errors={this.state.errors.username}/>
-                    <input
-                        type="password"
-                        className="form__input"
-                        name="password2"
-                        onChange={this.handlePasswordChange.bind(this)}
-                        value={this.state.password2}
-                        placeholder="Confirm your password."/>
+                <FormLabel name='password' error={this.state.errors.password}/>
+                <FormInput
+                    type='password'
+                    name='password'
+                    error={this.state.errors.password}
+                    eventHandler={this.handleChange}
+                    placeholder='Enter your password'
+                />
+                <ThrowErrors message={this.state.errors.password}/>
 
-                    <ThrowErrors message={this.state.errors.non_field_errors}/>
+                <FormLabel name='password2' text='Confirm password' error={this.state.errors.password}/>
+                <FormInput
+                    type='password'
+                    name='password2'
+                    error={this.state.errors.password}
+                    eventHandler={this.handleChange}
+                    placeholder='Confirm your password'
+                />
+                <ThrowErrors message={this.state.errors.non_field_errors}/>
 
-                    <button type="submit" className="button button_full_width">Register</button>
-                </form>
+                <button type="submit" className="button button_full_width">Register</button>
 
                 {this.state.message}
-            </div>
+            </form>
         )
     }
 
