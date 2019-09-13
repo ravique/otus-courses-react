@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import ThrowErrors from "../throw_errors/throw_errors";
-import API from "../utils/API";
-import {FormInput, FormLabel} from "../form/form";
+import ThrowErrors from "../../throw_errors/index";
+import API from "../../utils/API";
+import {FormInput, FormLabel} from "../../form/index";
 
 
 export default class RegisterForm extends Component {
@@ -21,9 +21,9 @@ export default class RegisterForm extends Component {
         this.handleChange = this.handleChange.bind(this);
     }
 
-    handleChange(event) {
+    handleChange({target: {name, value}}) {
         this.setState({
-                [event.target.name]: event.target.value
+                [name]: value
             }
         );
     }

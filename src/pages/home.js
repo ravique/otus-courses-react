@@ -1,13 +1,14 @@
 import React from "react";
-import {CoursesContainer, LecturersContainer} from "../container/container";
-import Button from "../button/button";
+import Button from "../button";
 import Content from "../container/content";
+import CoursesContainer from "./courses/courses_container";
+import LecturersContainer from "./lecturers";
 
 const Home = () => (
     <Content>
-        <h2>Courses:</h2>
+        <h2>Our courses</h2>
         <CoursesContainer/>
-        <Button url='/' text="Show more"/>
+        <Button url='/all_courses' text="Show more"/>
         <h2>Our lecturers</h2>
         <LecturersContainer/>
     </Content>

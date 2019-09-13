@@ -1,6 +1,6 @@
 import React from "react";
-import {CoursesContainer} from "../container/container";
-import Content from "../container/content";
+import Content from "../../container/content";
+import CoursesContainer from "./courses_container";
 
 const AllCourses = () => (
     <Content>

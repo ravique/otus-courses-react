@@ -1,13 +1,13 @@
 import React, {Component} from "react";
 import {Redirect} from "react-router-dom";
 
-import API from "../utils/API";
-import ThrowErrors from "../throw_errors/throw_errors";
-import {FormInput, FormLabel} from "../form/form";
+import API from "../../utils/API";
+import ThrowErrors from "../../throw_errors/index";
+import {FormInput, FormLabel} from "../../form/index";
 
 export default class LoginContainer extends Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
 
         this.state = {
             loggedIn: false,
@@ -15,15 +15,10 @@ export default class LoginContainer extends Component {
             username: '',
             password: ''
         };
-
-        this.handleChange = this.handleChange.bind(this);
     }
 
-    handleChange(event) {
-        this.setState({
-                [event.target.name]: event.target.value
-            }
-        );
+    handleChange({target: {name, value}}) {
+        this.setState({[name]: value});
     }
 
     handleSubmit = event => {
@@ -49,7 +44,6 @@ export default class LoginContainer extends Component {
     };
 
     render() {
-
         if (!this.state.loggedIn) {
             return (
                 <form className="form" onSubmit={this.handleSubmit.bind(this)}>

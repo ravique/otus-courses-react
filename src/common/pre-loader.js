@@ -1,4 +1,6 @@
-const PreLoader = (props) => (
+import React from 'react';
+
+const PreLoader = () => (
     'Data is loading'
 );
 

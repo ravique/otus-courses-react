@@ -1,9 +1,11 @@
 import React, {Component} from "react";
+import {Link} from 'react-router-dom';
+
 const classNames = require('classnames');
 
 class Button extends Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
 
         this.state = {
             pressed: false
@@ -24,7 +26,7 @@ class Button extends Component {
         });
 
         return (
-            <button className={btnClass} onClick={this.handleClick.bind(this)}>{this.props.text}</button>
+            <Link to={this.props.url} className={btnClass}>{this.props.text}</Link>
         )
     }
 

@@ -3,19 +3,19 @@ import {BrowserRouter, Route} from 'react-router-dom';
 import {createBrowserHistory} from 'history';
 
 import './App.scss';
-import Footer from './footer/footer.js';
-import Header from './header/header';
+import Footer from './footer';
+import Header from './header';
 import Home from './pages/home'
-import AllCourses from './pages/all_courses'
-import Login from './pages/login'
-import Register from './pages/register'
+import AllCourses from './pages/courses'
+import Login from './pages/login/index'
+import Register from './pages/register/index'
 import Logout from "./pages/logout";
-import AccountContainer from "./pages/account";
+import AccountContainer from "./pages/account/index";
 
 const history = createBrowserHistory();
 
 
-class Nav extends Component {
+export default class App extends Component {
     render() {
         return (
             <BrowserRouter history={history}>
@@ -32,5 +32,4 @@ class Nav extends Component {
     }
 }
 
-export default Nav;
 

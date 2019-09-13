@@ -1,6 +1,6 @@
 import React from "react";
-import Content from "../container/content";
-import RegisterForm from "../register_form/register_form";
+import Content from "../../container/content";
+import RegisterForm from "./register_form";
 
 const Register = () => (
     <Content>

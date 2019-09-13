@@ -32,6 +32,7 @@ class FormInput extends Component {
                 placeholder={this.props.placeholder}
                 value={this.props.value}
                 onChange={this.handleChange.bind(this)}
+                accept={this.props.accept}
             />
         )
     }

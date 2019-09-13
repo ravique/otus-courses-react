@@ -1,6 +1,6 @@
 import React from "react";
-import LoginContainer from "../login_form/login_form";
-import Content from "../container/content";
+import LoginContainer from "./login_form";
+import Content from "../../container/content";
 
 const Login = () => (
     <Content>
