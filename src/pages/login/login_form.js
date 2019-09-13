@@ -17,9 +17,9 @@ export default class LoginContainer extends Component {
         };
     }
 
-    handleChange({target: {name, value}}) {
+    handleChange = ({target: {name, value}}) => {
         this.setState({[name]: value});
-    }
+    };
 
     handleSubmit = event => {
         event.preventDefault();
