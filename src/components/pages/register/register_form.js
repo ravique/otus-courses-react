@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import ThrowErrors from "../../throw_errors/index";
-import API from "../../utils/API";
+import API from "../../../utils/API";
 import {FormInput, FormLabel} from "../../form/index";
 
 

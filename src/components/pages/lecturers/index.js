@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 
-import API from "../../utils/API";
+import API from "../../../utils/API";
 import LecturersBlock from "./lecturers-block";
 import PreLoader from "../../common/pre-loader";
 

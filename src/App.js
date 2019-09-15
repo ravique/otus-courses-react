@@ -3,14 +3,14 @@ import {BrowserRouter, Route} from 'react-router-dom';
 import {createBrowserHistory} from 'history';
 
 import './App.scss';
-import Footer from './footer';
-import Header from './header';
-import Home from './pages/home'
-import AllCourses from './pages/courses'
-import Login from './pages/login/index'
-import Register from './pages/register/index'
-import Logout from "./pages/logout";
-import AccountContainer from "./pages/account/index";
+import Footer from './components/footer';
+import Header from './components/header';
+import Home from './components/pages/home'
+import AllCourses from './components/pages/courses'
+import Login from './components/pages/login/index'
+import Register from './components/pages/register/index'
+import Logout from "./components/pages/logout";
+import AccountContainer from "./components/pages/account/index";
 
 const history = createBrowserHistory();
 

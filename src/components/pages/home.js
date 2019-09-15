@@ -1,8 +1,8 @@
 import React from "react";
-import Button from "../button";
+import Button from "../button/index";
 import Content from "../container/content";
 import CoursesContainer from "./courses/courses_container";
-import LecturersContainer from "./lecturers";
+import LecturersContainer from "./lecturers/index";
 
 const Home = () => (
     <Content>

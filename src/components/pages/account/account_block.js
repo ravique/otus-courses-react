@@ -28,7 +28,7 @@ export default class AccountBlock extends Component {
         })
     };
 
-    handleAvatarChange = (event) => {
+    handleAvatarChange = event => {
         event.preventDefault();
 
         let reader = new FileReader();

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {capitalizeFirstLetter} from "../utils/utils";
+import {capitalizeFirstLetter} from "../../utils/utils";
 const classNames = require('classnames');
 
 class FormLabel extends Component {

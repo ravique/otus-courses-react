@@ -1,14 +1,14 @@
 import React, {Component} from 'react';
 
 import PreLoader from "../../common/pre-loader";
-import API from "../../utils/API";
+import API from "../../../utils/API";
 import Content from "../../container/content";
 import AccountBlock from "./account_block";
 
 export default class AccountContainer extends Component {
 
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
 
         this.state = {
             isLoading: true,

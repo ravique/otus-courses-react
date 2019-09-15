@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import API from "../../utils/API";
+import API from "../../../utils/API";
 import PreLoader from "../../common/pre-loader";
 import CoursesBlock from "./courses-block";
 

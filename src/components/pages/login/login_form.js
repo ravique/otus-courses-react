@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {Redirect} from "react-router-dom";
 
-import API from "../../utils/API";
+import API from "../../../utils/API";
 import ThrowErrors from "../../throw_errors/index";
 import {FormInput, FormLabel} from "../../form/index";
 
