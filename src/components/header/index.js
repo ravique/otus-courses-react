@@ -1,11 +1,10 @@
 import React from "react";
-import {Logo, Menu} from '../menu/menu'
-
+import {Logo, SmartMenu} from '../menu/menu'
 
 const Header = () => (
     <div className='header'>
         <Logo/>
-        <Menu/>
+        <SmartMenu/>
     </div>
 );
 

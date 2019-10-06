@@ -11,11 +11,12 @@ import Login from './components/pages/login/index'
 import Register from './components/pages/register/index'
 import Logout from "./components/pages/logout";
 import AccountContainer from "./components/pages/account/index";
+import Table from "./components/pages/table";
 
 const history = createBrowserHistory();
 
 
-export default class App extends Component {
+class App extends Component {
     render() {
         return (
             <BrowserRouter history={history}>
@@ -26,6 +27,7 @@ export default class App extends Component {
                 <Route path="/register" component={Register}/>
                 <Route path="/logout" component={Logout}/>
                 <Route path="/account" component={AccountContainer}/>
+                <Route path="/table" component={Table}/>
                 <Footer/>
             </BrowserRouter>
         )
@@ -33,3 +35,4 @@ export default class App extends Component {
 }
 
 
+export default App;

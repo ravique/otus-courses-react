@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-
+import {connect} from 'react-redux';
+import Links from './links'
 
 const Logo = () => (
     <h1 className="header__logo">
@@ -8,14 +9,35 @@ const Logo = () => (
     </h1>
 );
 
-const Menu = () => (
-    <div className='menu'>
-        <Link to="/all_courses" className="menu__link">All courses</Link>,
-        <Link to="/login" className="menu__link">Login</Link>,
-        <Link to="/logout" className="menu__link">Logout</Link>,
-        <Link to="/register" className="menu__link">Register</Link>,
-        <Link to="/account" className="menu__link">Account</Link>
-    </div>
-);
+class Menu extends Component {
+    render() {
 
-export {Logo, Menu};
+        const {loggedIn, userType} = this.props;
+
+        let links = [
+            {name: 'All courses', url: '/all_courses'},
+        ];
+
+        userType === 'lecturer' && links.push({name: 'Table', url: '/table'});
+
+        loggedIn ? links.push({name: 'Account', url: '/account'}, {name: 'Logout', url: '/logout'}) :
+            links.push({name: 'Login', url: '/login'}, {name: 'Register', url: '/register'});
+
+        return (
+            <div className='menu'>
+                <Links links={links}/>
+            </div>
+        )
+    }
+}
+
+const mapStateToProps = ({loggedIn, userType}) => {
+    return {
+        loggedIn: loggedIn,
+        userType: userType
+    }
+};
+
+const SmartMenu = connect(mapStateToProps)(Menu);
+
+export {Logo, SmartMenu};

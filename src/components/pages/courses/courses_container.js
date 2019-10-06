@@ -5,8 +5,8 @@ import CoursesBlock from "./courses-block";
 
 export default class CoursesContainer extends Component {
 
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
 
         this.state = {
             isLoading: true,

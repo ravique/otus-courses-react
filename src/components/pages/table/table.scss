@@ -1,0 +1,21 @@
+.students-score {
+  width: 100%;
+  border-spacing: 0;
+
+  &__header {
+    text-align: left;
+  }
+
+  &__row {
+
+      &__cell {
+        border-top: 1px solid $dimgray;
+        padding: 7px 0;
+
+        &__avatar {
+          border-radius: 9000px;
+        }
+
+      }
+  }
+}

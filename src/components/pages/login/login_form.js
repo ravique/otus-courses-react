@@ -1,11 +1,13 @@
 import React, {Component} from "react";
 import {Redirect} from "react-router-dom";
+import {connect} from 'react-redux';
 
 import API from "../../../utils/API";
 import ThrowErrors from "../../throw_errors/index";
 import {FormInput, FormLabel} from "../../form/index";
+import {logIn} from "../../../actions";
 
-export default class LoginContainer extends Component {
+class LoginContainer extends Component {
     constructor() {
         super();
 
@@ -21,18 +23,24 @@ export default class LoginContainer extends Component {
         this.setState({[name]: value});
     };
 
+
+
     handleSubmit = event => {
+        const {dispatch} = this.props;
+
         event.preventDefault();
         API.post('login/', {"username": this.state.username, "password": this.state.password})
             .then(response => {
                     this.setState({
                         loggedIn: true
-                    })
+                    });
+
+                    dispatch(logIn(response.data.type));
+
                 }
             ).catch(
             errors => {
                 if (errors.response) {
-                    console.log(errors.response.data['errors']);
                     this.setState(
                         {
                             errors: errors.response.data['errors']
@@ -82,3 +90,6 @@ export default class LoginContainer extends Component {
     }
 }
 
+const SmartLoginContainer = connect()(LoginContainer);
+
+export default SmartLoginContainer;
