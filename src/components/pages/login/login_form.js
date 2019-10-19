@@ -54,7 +54,7 @@ class LoginContainer extends Component {
     render() {
         if (!this.state.loggedIn) {
             return (
-                <form className="form" onSubmit={this.handleSubmit.bind(this)}>
+                <form className="form" onSubmit={this.handleSubmit}>
                     <FormLabel name="login"/>
                     <FormInput
                         type="text"

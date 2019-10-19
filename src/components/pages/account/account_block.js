@@ -52,7 +52,7 @@ export default class AccountBlock extends Component {
             this.state.avatar ? this.state.avatar : 'https://dummyimage.com/1000x1000/000000/0011ff.png&text=Upload+your+photo!';
 
         return (
-            <form className="form_full_width" onSubmit={this.updateData.bind(this)}>
+            <form className="form_full_width" onSubmit={this.updateData}>
                 <div className="form_full_width__column_half_width">
                     <FormLabel className="form" name='username'/>
                     <FormInput
@@ -110,7 +110,7 @@ export default class AccountBlock extends Component {
                     {this.props.message}
                 </div>
                 <div className="form_full_width__column_half_width">
-                    <img className="avatar" src={avatar}/>
+                    <img className="avatar" alt={`$this.state.first_name $this.state.last_name`} src={avatar}/>
                     <FormInput
                         type="file"
                         name="avatar"

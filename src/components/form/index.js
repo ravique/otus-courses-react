@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
+
 import {capitalizeFirstLetter} from "../../utils/utils";
 const classNames = require('classnames');
 
@@ -14,9 +16,9 @@ class FormLabel extends Component {
 
 class FormInput extends Component {
 
-    handleChange(event) {
+    handleChange = (event) => {
         this.props.eventHandler(event);
-    }
+    };
 
     render() {
         const inputCls = classNames({
@@ -31,11 +33,19 @@ class FormInput extends Component {
                 name={this.props.name}
                 placeholder={this.props.placeholder}
                 value={this.props.value}
-                onChange={this.handleChange.bind(this)}
+                onChange={this.handleChange}
                 accept={this.props.accept}
             />
         )
     }
 }
+
+FormInput.propTypes = {
+    type: PropTypes.string,
+    name: PropTypes.string,
+    placeholder: PropTypes.string,
+    value: PropTypes.string,
+    accept: PropTypes.string
+};
 
 export {FormLabel, FormInput};

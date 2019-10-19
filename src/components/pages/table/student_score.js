@@ -12,7 +12,7 @@ export default class StudentScore extends Component {
         return (
             <tr key={index}>
                 <td className='students-score__row__cell'>
-                    <img className='students-score__row__cell__avatar' src={avatar_url}/>
+                    <img className='students-score__row__cell__avatar' alt={full_name} src={avatar_url}/>
                 </td>
                 <td className='students-score__row__cell'>
                     {full_name}

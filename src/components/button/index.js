@@ -6,18 +6,16 @@ const classNames = require('classnames');
 class Button extends Component {
     constructor() {
         super();
-
         this.state = {
             pressed: false
         };
     }
 
-
-    handleClick() {
-        this.setState(prevState => ({
+    handleClick = () => {
+         this.setState(prevState => ({
             pressed: !prevState.pressed
         }));
-    }
+    };
 
     render() {
         let btnClass = classNames({
@@ -26,10 +24,9 @@ class Button extends Component {
         });
 
         return (
-            <Link to={this.props.url} className={btnClass}>{this.props.text}</Link>
+            <Link to={this.props.url} className={btnClass} onClick={this.handleClick}>{this.props.text}</Link>
         )
     }
-
 }
 
-export default Button
+export default Button;

@@ -18,39 +18,37 @@ export default class RegisterForm extends Component {
             message: ''
         };
 
-        this.handleChange = this.handleChange.bind(this);
     }
 
-    handleChange({target: {name, value}}) {
-        this.setState({
+
+    handleChange = ({target: {name, value}}) => {
+         this.setState({
                 [name]: value
             }
         );
-    }
+    };
 
-    handlePasswordChange(event) {
+    handlePasswordChange = (event) => {
 
         let check;
         event.target.name === 'password' ? check = this.state.password2 : check = this.state.password;
 
-        if (event.target.value !== check) {
-            this.setState({
-                    errors: {
-                        password: ['Passwords mismatch']
-                    }
+        console.log(event.target.value);
+        console.log(check);
+
+        event.target.value !== check ? this.setState({
+            errors: {
+                password: ['Passwords mismatch']
+            }
+        }) : this.setState({
+                errors: {
+                    password: null
                 }
-            );
-        } else {
-            this.setState({
-                    errors: {
-                        password: []
-                    }
-                }
-            );
-        }
+            }
+        );
 
         this.handleChange(event);
-    }
+    };
 
     handleSubmit = event => {
         event.preventDefault();
@@ -81,7 +79,7 @@ export default class RegisterForm extends Component {
 
     render() {
         return (
-            <form className="form" onSubmit={this.handleSubmit.bind(this)}>
+            <form className="form" onSubmit={this.handleSubmit}>
 
                 <FormLabel name='username' error={this.state.errors.username}/>
                 <FormInput
@@ -108,7 +106,7 @@ export default class RegisterForm extends Component {
                     type='password'
                     name='password'
                     error={this.state.errors.password}
-                    eventHandler={this.handleChange}
+                    eventHandler={this.handlePasswordChange}
                     placeholder='Enter your password'
                 />
                 <ThrowErrors message={this.state.errors.password}/>
@@ -118,7 +116,7 @@ export default class RegisterForm extends Component {
                     type='password'
                     name='password2'
                     error={this.state.errors.password}
-                    eventHandler={this.handleChange}
+                    eventHandler={this.handlePasswordChange}
                     placeholder='Confirm your password'
                 />
                 <ThrowErrors message={this.state.errors.non_field_errors}/>
