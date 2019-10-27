@@ -7,7 +7,7 @@ import ThrowErrors from "../../throw_errors/index";
 import {FormInput, FormLabel} from "../../form/index";
 import {logIn} from "../../../actions";
 
-class LoginContainer extends Component {
+export class LoginContainer extends Component {
     constructor() {
         super();
 
@@ -24,31 +24,28 @@ class LoginContainer extends Component {
     };
 
 
-
     handleSubmit = event => {
         const {dispatch} = this.props;
 
         event.preventDefault();
-        API.post('login/', {"username": this.state.username, "password": this.state.password})
+
+        return API.post('login/', {"username": this.state.username, "password": this.state.password})
             .then(response => {
                     this.setState({
                         loggedIn: true
                     });
 
                     dispatch(logIn(response.data.type));
-
                 }
-            ).catch(
-            errors => {
+            ).catch(errors => {
                 if (errors.response) {
                     this.setState(
-                        {
-                            errors: errors.response.data['errors']
-                        }
+                        {errors: errors.response.data['errors']}
                     );
                 }
             }
-        )
+        );
+
     };
 
     render() {

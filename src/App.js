@@ -16,7 +16,7 @@ import Table from "./components/pages/table";
 const history = createBrowserHistory();
 
 
-class App extends Component {
+export default class App extends Component {
     render() {
         return (
             <BrowserRouter history={history}>
@@ -34,5 +34,3 @@ class App extends Component {
     }
 }
 
-
-export default App;

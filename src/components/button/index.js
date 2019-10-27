@@ -3,7 +3,8 @@ import {Link} from 'react-router-dom';
 
 const classNames = require('classnames');
 
-class Button extends Component {
+export default class Button extends Component {
+
     constructor() {
         super();
         this.state = {
@@ -18,15 +19,17 @@ class Button extends Component {
     };
 
     render() {
+
+        const {url, text} = this.props;
+
         let btnClass = classNames({
             'button': true,
             'button_pressed': this.state.pressed
         });
 
         return (
-            <Link to={this.props.url} className={btnClass} onClick={this.handleClick}>{this.props.text}</Link>
+            <Link to={url} className={btnClass} onClick={this.handleClick}>{text}</Link>
         )
     }
 }
 
-export default Button;

@@ -9,4 +9,4 @@ const Login = () => (
     </Content>
 );
 
-export default Login
+export default Login;
