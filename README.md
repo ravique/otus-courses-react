@@ -32,6 +32,11 @@ npm run-script build
 npm start
 ```
 
+## Tests
+```commmandline
+npm test
+```
+
 ## Authors
 
 * **Andrei Etmanov** - *Student of OTUS :)*

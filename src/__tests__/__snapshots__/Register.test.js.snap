@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Register should render register page 1`] = `
+<Content>
+  <h2>
+    Register:
+  </h2>
+  <RegisterForm />
+</Content>
+`;

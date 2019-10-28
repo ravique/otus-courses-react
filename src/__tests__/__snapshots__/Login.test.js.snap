@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login should render login 1`] = `
+<Content>
+  <h2>
+    Login:
+  </h2>
+  <Connect(LoginContainer) />
+</Content>
+`;

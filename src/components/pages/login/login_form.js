@@ -36,6 +36,7 @@ export class LoginContainer extends Component {
                     });
 
                     dispatch(logIn(response.data.type));
+
                 }
             ).catch(errors => {
                 if (errors.response) {
@@ -45,7 +46,6 @@ export class LoginContainer extends Component {
                 }
             }
         );
-
     };
 
     render() {

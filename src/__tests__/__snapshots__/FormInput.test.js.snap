@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormInput should render form input 1`] = `
+<input
+  accept="accept"
+  className="form__input"
+  name="Test input"
+  onChange={[Function]}
+  placeholder="placeholder"
+  type="text"
+  value="mock-value"
+/>
+`;

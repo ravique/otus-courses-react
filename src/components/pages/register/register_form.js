@@ -33,9 +33,6 @@ export default class RegisterForm extends Component {
         let check;
         event.target.name === 'password' ? check = this.state.password2 : check = this.state.password;
 
-        console.log(event.target.value);
-        console.log(check);
-
         event.target.value !== check ? this.setState({
             errors: {
                 password: ['Passwords mismatch']
@@ -53,7 +50,9 @@ export default class RegisterForm extends Component {
     handleSubmit = event => {
         event.preventDefault();
 
-        API.post('register/', {
+        // this.setState({ errors: []});
+
+        return API.post('register/', {
             "username": this.state.username,
             "password": this.state.password,
             "email": this.state.email
@@ -63,10 +62,10 @@ export default class RegisterForm extends Component {
                         message: `Registered successfully. Verification email sent to ${response.data.email}`,
                         errors: []
                     }
-                )
+                );
+
             }
-        ).catch(
-            errors => {
+        ).catch(errors => {
                 if (errors.response) {
                     this.setState({
                         errors: errors.response.data['errors']
@@ -74,7 +73,6 @@ export default class RegisterForm extends Component {
                 }
             }
         )
-
     };
 
     render() {

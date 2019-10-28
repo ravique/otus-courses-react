@@ -9,4 +9,4 @@ const Register = () => (
     </Content>
 );
 
-export default Register
+export default Register;

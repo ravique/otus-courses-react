@@ -1,18 +1,20 @@
 import React from 'react';
-import {shallow, mount} from 'enzyme';
+import {mount} from 'enzyme';
 import {shallowToJson} from 'enzyme-to-json';
 import '../../jest.config'
-import MockAdapter from 'axios-mock-adapter';
+import {MemoryRouter} from "react-router-dom";
 
 import {LoginContainer} from '../components/pages/login/login_form'
 import API from "../utils/API";
-import {MemoryRouter} from "react-router-dom";
+import MockAdapter from 'axios-mock-adapter';
+import {fakeEvent} from "../__mocks__";
+
 
 
 describe('LoginContainer', () => {
 
     let output;
-
+    
     beforeEach(() => {
         output = mount(
             <MemoryRouter>
@@ -22,14 +24,10 @@ describe('LoginContainer', () => {
     });
 
     it('should render login container', () => {
-
-
         expect(shallowToJson(output)).toMatchSnapshot();
     });
 
     it('should login', () => {
-
-
         expect(output.state().loggedIn).toBeFalsy();
     });
 
@@ -51,14 +49,13 @@ describe('LoginContainer', () => {
             const expected = {
                 username: 'John',
                 password: '32768',
-                errors: '',
                 loggedIn: false
             };
 
             output.instance().handleChange(mockChangeUsername);
             output.instance().handleChange(mockChangePassword);
 
-            expect(output.state()).toEqual(expected);
+            expect(output.state()).toMatchObject(expected);
         }
     );
 
@@ -67,19 +64,20 @@ describe('LoginContainer', () => {
         let mock = new MockAdapter(API);
         mock.onPost('login/').reply(200);
 
-        const fakeEvent = {
-            preventDefault: () => {}
-        };
+        await output.instance().handleSubmit(fakeEvent);
+
+        expect(output.state().loggedIn).toEqual(true);
+    });
+
+    it('should fail login', async () => {
+
+        let mock2 = new MockAdapter(API);
+        mock2.onPost('login/').reply(400, {"errors":{"non_field_errors":["Incorrect email or password."]}});
 
         await output.instance().handleSubmit(fakeEvent);
-        output.update();
 
-        expect(output.state().loggedIn).toEqual(true)
+        expect(output.state().loggedIn).toEqual(false);
+        expect(output.state().errors.non_field_errors).toContain('Incorrect email or password.');
+        expect(output.text()).toContain('Incorrect email or password.');
     })
 });
-
-
-describe('LoginContainer', () => {
-
-});
-
