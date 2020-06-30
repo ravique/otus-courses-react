@@ -1,6 +1,6 @@
 # Vaporwave courses theme 
 
-Experimental React layouts for "Vaporwave courses" website.
+Experimental React layouts for "Vaporwave courses" website ([backend](https://github.com/ravique/otus-courses-backend/blob/master/README.md)).
 
 [= DEMO =](https://oc.space-coding.com) 
 
